@@ -43,9 +43,18 @@ class Header extends StatelessWidget {
           children: [
             Positioned(
               child: ListTile(
-                leading: const Icon(
-                  Icons.menu,
-                  color: kTextColor,
+                leading: Builder(
+                  builder: (context) {
+                    return IconButton(
+                      onPressed: () {
+                        Scaffold.of(context).openDrawer();
+                      },
+                      icon: const Icon(
+                        Icons.menu,
+                        color: kTextColor,
+                      ),
+                    );
+                  },
                 ),
                 trailing: CircleAvatar(
                   child: Container(

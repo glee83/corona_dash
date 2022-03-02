@@ -7,6 +7,8 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../widgets/custom_drawer.dart';
+
 class GraphPage extends StatelessWidget {
   const GraphPage({Key? key}) : super(key: key);
 
@@ -14,43 +16,7 @@ class GraphPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: kTextColor,
-      drawer: Drawer(
-          child: ListView(
-        children: const [
-          DrawerHeader(
-            decoration: BoxDecoration(
-              color: kPrimaryColor,
-              image: DecorationImage(
-                image: AssetImage('images/girl.jpg'),
-                fit: BoxFit.cover,
-                colorFilter: ColorFilter.mode(
-                  kPrimaryColor,
-                  BlendMode.color,
-                ),
-              ),
-            ),
-            child: Text(
-              'Minet Gleeweh',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-              ),
-            ),
-          ),
-          ListTile(
-            leading: Icon(Icons.message),
-            title: Text('Messages'),
-          ),
-          ListTile(
-            leading: Icon(Icons.account_circle),
-            title: Text('Profile'),
-          ),
-          ListTile(
-            leading: Icon(Icons.settings),
-            title: Text('Settings'),
-          ),
-        ],
-      )),
+      drawer: const Custom_drawer(),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(

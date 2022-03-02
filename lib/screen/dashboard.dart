@@ -1,5 +1,6 @@
 import 'package:corona_dash/constant/constant.dart';
 import 'package:corona_dash/widgets/custom_card.dart';
+import 'package:corona_dash/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -14,6 +15,7 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kDartColor,
+      drawer: const Custom_drawer(),
       body: SingleChildScrollView(
         physics: const ScrollPhysics(),
         child: SafeArea(
