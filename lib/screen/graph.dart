@@ -1,5 +1,6 @@
 import 'package:corona_dash/constant/constant.dart';
 import 'package:corona_dash/model/chart_model.dart';
+import 'package:corona_dash/routes/route_names.dart';
 import 'package:corona_dash/widgets/custom_header.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -140,8 +141,15 @@ class GraphPage extends StatelessWidget {
                 );
               },
             ),
-            actions: const [
-              CircleAvatar(backgroundImage: AssetImage('images/girl.jpg')),
+            actions: [
+              InkWell(
+                onTap: () {
+                  Navigator.of(context).pushNamed(Routing.user);
+                },
+                child: const CircleAvatar(
+                  backgroundImage: AssetImage('images/girl.jpg'),
+                ),
+              ),
 
               // child: Image(
               //   image: AssetImage('images/girl.jpg'),
